@@ -1,7 +1,7 @@
 # Call of Duty Camo Tracker
 Use this HTML file to help track which camos you're up to.
 
-![image](https://github.com/user-attachments/assets/0ed63a90-5849-49af-8145-30f2c45227f1)
+![image](https://github.com/user-attachments/assets/c8867377-3a7c-48ad-aad6-0abc0a3199c1)
 
 It automatically saves when you change a colour or click a checkbox, so you can close and reopen it whenever.
 
@@ -32,6 +32,12 @@ Gold - Gold\
 Silver - Diamond
 
 For Dark Spine I use the checkbox + purple and for Dark Matter I use Checkbox + Black
+
+Feel free to change the colours (the gold is fine on my second monitor but it's hard to read on the main one)
+
+Just change the RGB values (in both places) near the bottom of the file here\
+![image](https://github.com/user-attachments/assets/a1af7601-1f86-46b7-b5cc-2422b8f4be86)
+
 
 ## Adding More Weapons
 Adding weapons is pretty straight forward\
