@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Black Ops 6 Camos </title>
+<link rel="icon" type="image.png" href="https://cdn2.steamgriddb.com/icon_thumb/3573f7766dd489c09d7435c575c76131.png">
+
+<style>
+
+body {
+background-color: linen;
+padding-x: 10px;
+user-select: none;
+margin: 0;
+}
+
+label{
+font-family: monospace;
+font: monaco;
+font-size: 20px;
+}
+
+input{
+width: 25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.tab {
+overflow: hidden;
+background-color: #E0D7CE;
+display: flex;
+flex: 1;
+justify-content: center;
+}
+
+.tab button{
+background-color: inherit;
+float: left;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 18px 25px;
+transition: 0.3s;
+font-size: 17px
+}
+
+.tab button:hover {
+background-color: #D1C9C0
+}
+
+.tab button.active {
+background-color: #C4BCB5;
+}
+
+
+</style>
+</head>
+
+
+<body>
+	<div class="tab">
+		<button class="tablinks active" onclick="openGameMode(event, 'mp-')">Multiplayer</button>
+		<button class="tablinks" onclick="openGameMode(event, 'zombies-')">Zombies</button>
+		<button class="tablinks" onclick="openGameMode(event, 'wz-')">Warzone</button>
+	</div>
+
+
+	<div id="mp-" class="tabcontent">
+		<div class="grid-container">
+			<div class="grid-item">
+				<h2>Assault Rifles</h2>
+				<label><input type="checkbox" id="mp-xm4"> XM4</label><br>
+				<label><input type="checkbox" id="mp-ak74"> AK-74</label><br>
+				<label><input type="checkbox" id="mp-ames"> AMES 85</label><br>
+				<label><input type="checkbox" id="mp-gpr"> GPR 91</label><br>
+				<label><input type="checkbox" id="mp-modell"> MODEL L</label><br>
+				<label><input type="checkbox" id="mp-goblin"> GOBLIN MK2</label><br>
+				<label><input type="checkbox" id="mp-asval"> AS VAL</label><br>
+				<label><input type="checkbox" id="mp-krig"> KRIG C</label><br><br>
+			</div>
+
+			<div class="grid-item">
+			<h2>Light Machine Guns</h2>
+				<label><input type="checkbox" id="mp-pu21"> PU-21</label><br>
+				<label><input type="checkbox" id="mp-xmg"> XMG</label><br>
+				<label><input type="checkbox" id="mp-gpmg"> GPMG-7</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Pistols</h2>
+				<label><input type="checkbox" id="mp-9mm"> 9mm PM</label><br>
+				<label><input type="checkbox" id="mp-grekhova"> Grekhova</label><br>
+				<label><input type="checkbox" id="mp-gs45"> GS45</label><br>
+				<label><input type="checkbox" id="mp-stryder"> Stryder .22</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+			<h2>Submachine Guns</h2>
+				<label><input type="checkbox" id="mp-c9"> C9</label><br>
+				<label><input type="checkbox" id="mp-ksv"> KSV</label><br>
+				<label><input type="checkbox" id="mp-tanto"> TANTO .22</label><br>
+				<label><input type="checkbox" id="mp-pp919"> PP-919</label><br>
+				<label><input type="checkbox" id="mp-jackal"> Jackal PDW</label><br>
+				<label><input type="checkbox" id="mp-kompakt"> KOMPAKT 92</label><br>
+				<label><input type="checkbox" id="mp-saug"> Saug</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Marksman Rifles</h2>
+				<label><input type="checkbox" id="mp-swat"> SWAT 5.56</label><br>
+				<label><input type="checkbox" id="mp-tsarkov"> Tsarkov 7.62</label><br>
+				<label><input type="checkbox" id="mp-aek"> AEK-973</label><br>
+				<label><input type="checkbox" id="mp-dm10"> DM-10</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Launchers/Special</h2>
+				<label><input type="checkbox" id="mp-cigma"> CIGMA 2B</label><br>
+				<label><input type="checkbox" id="mp-he1"> HE-1</label><br>
+				<label><input type="checkbox" id="mp-sirin"> SIRIN 9mm</label><br><br>
+			</div>
+			
+			
+			<div class="grid-item">
+				<h2>Shotguns</h2>
+				<label><input type="checkbox" id="mp-marinesp"> Marine SP</label><br>
+				<label><input type="checkbox" id="mp-asg"> ASG-89</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Sniper Rifles</h2>
+				<label><input type="checkbox" id="mp-frostline"> LW3A1 Frostline</label><br>
+				<label><input type="checkbox" id="mp-svd"> SVD</label><br>
+				<label><input type="checkbox" id="mp-lr"> LR 7.62</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Melee</h2>
+				<label><input type="checkbox" id="mp-knife"> Knife</label><br>
+				<label><input type="checkbox" id="mp-bat"> Baseball Bat</label><br>
+				<label><input type="checkbox" id="mp-drill"> Power Drill</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2 id="mp-counter">Counter: 0</h2>
+				<button onclick="reset()" >Reset</button>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="zombies-" class="tabcontent">
+		<div class="grid-container">
+			<div class="grid-item">
+				<h2>Assault Rifles</h2>
+				<label><input type="checkbox" id="zombies-xm4"> XM4</label><br>
+				<label><input type="checkbox" id="zombies-ak74"> AK-74</label><br>
+				<label><input type="checkbox" id="zombies-ames"> AMES 85</label><br>
+				<label><input type="checkbox" id="zombies-gpr"> GPR 91</label><br>
+				<label><input type="checkbox" id="zombies-modell"> MODEL L</label><br>
+				<label><input type="checkbox" id="zombies-goblin"> GOBLIN MK2</label><br>
+				<label><input type="checkbox" id="zombies-asval"> AS VAL</label><br>
+				<label><input type="checkbox" id="zombies-krig"> KRIG C</label><br><br>
+			</div>
+
+			<div class="grid-item">
+			<h2>Light Machine Guns</h2>
+				<label><input type="checkbox" id="zombies-pu21"> PU-21</label><br>
+				<label><input type="checkbox" id="zombies-xmg"> XMG</label><br>
+				<label><input type="checkbox" id="zombies-gpmg"> GPMG-7</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Pistols</h2>
+				<label><input type="checkbox" id="zombies-9mm"> 9mm PM</label><br>
+				<label><input type="checkbox" id="zombies-grekhova"> Grekhova</label><br>
+				<label><input type="checkbox" id="zombies-gs45"> GS45</label><br>
+				<label><input type="checkbox" id="zombies-stryder"> Stryder .22</label><br><br>
+			</div>
+
+			<div class="grid-item">
+			<h2>Submachine Guns</h2>
+				<label><input type="checkbox" id="zombies-c9"> C9</label><br>
+				<label><input type="checkbox" id="zombies-ksv"> KSV</label><br>
+				<label><input type="checkbox" id="zombies-tanto"> TANTO .22</label><br>
+				<label><input type="checkbox" id="zombies-pp919"> PP-919</label><br>
+				<label><input type="checkbox" id="zombies-jackal"> Jackal PDW</label><br>
+				<label><input type="checkbox" id="zombies-kompakt"> KOMPAKT 92</label><br>
+				<label><input type="checkbox" id="zombies-saug"> Saug</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Marksman Rifles</h2>
+				<label><input type="checkbox" id="zombies-swat"> SWAT 5.56</label><br>
+				<label><input type="checkbox" id="zombies-tsarkov"> Tsarkov 7.62</label><br>
+				<label><input type="checkbox" id="zombies-aek"> AEK-973</label><br>
+				<label><input type="checkbox" id="zombies-dm10"> DM-10</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Launchers/Specials</h2>
+				<label><input type="checkbox" id="zombies-cigma"> CIGMA 2B</label><br>
+				<label><input type="checkbox" id="zombies-he1"> HE-1</label><br>
+				<label><input type="checkbox" id="zombies-sirin"> SIRIN 9mm</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Shotguns</h2>
+				<label><input type="checkbox" id="zombies-marinesp"> Marine SP</label><br>
+				<label><input type="checkbox" id="zombies-asg"> ASG-89</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Sniper Rifles</h2>
+				<label><input type="checkbox" id="zombies-frostline"> LW3A1 Frostline</label><br>
+				<label><input type="checkbox" id="zombies-svd"> SVD</label><br>
+				<label><input type="checkbox" id="zombies-lr"> LR 7.62</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Melee</h2>
+				<label><input type="checkbox" id="zombies-knife"> Knife</label><br>
+				<label><input type="checkbox" id="zombies-bat"> Baseball Bat</label><br>
+				<label><input type="checkbox" id="zombies-drill"> Power Drill</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2 id="zombies-counter">Counter: 0</h2>
+				<button onclick="reset()" >Reset</button>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="wz-" class="tabcontent">
+		<div class="grid-container">
+			<div class="grid-item">
+				<h2>Assault Rifles</h2>
+				<label><input type="checkbox" id="wz-xm4"> XM4</label><br>
+				<label><input type="checkbox" id="wz-ak74"> AK-74</label><br>
+				<label><input type="checkbox" id="wz-ames"> AMES 85</label><br>
+				<label><input type="checkbox" id="wz-gpr"> GPR 91</label><br>
+				<label><input type="checkbox" id="wz-modell"> MODEL L</label><br>
+				<label><input type="checkbox" id="wz-goblin"> GOBLIN MK2</label><br>
+				<label><input type="checkbox" id="wz-asval"> AS VAL</label><br>
+				<label><input type="checkbox" id="wz-krig"> KRIG C</label><br><br>
+			</div>
+
+			<div class="grid-item">
+			<h2>Light Machine Guns</h2>
+				<label><input type="checkbox" id="wz-pu21"> PU-21</label><br>
+				<label><input type="checkbox" id="wz-xmg"> XMG</label><br>
+				<label><input type="checkbox" id="wz-gpmg"> GPMG-7</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Pistols</h2>
+				<label><input type="checkbox" id="wz-9mm"> 9mm PM</label><br>
+				<label><input type="checkbox" id="wz-grekhova"> Grekhova</label><br>
+				<label><input type="checkbox" id="wz-gs45"> GS45</label><br>
+				<label><input type="checkbox" id="wz-stryder"> Stryder .22</label><br><br>
+			</div>
+
+			<div class="grid-item">
+			<h2>Submachine Guns</h2>
+				<label><input type="checkbox" id="wz-c9"> C9</label><br>
+				<label><input type="checkbox" id="wz-ksv"> KSV</label><br>
+				<label><input type="checkbox" id="wz-tanto"> TANTO .22</label><br>
+				<label><input type="checkbox" id="wz-pp919"> PP-919</label><br>
+				<label><input type="checkbox" id="wz-jackal"> Jackal PDW</label><br>
+				<label><input type="checkbox" id="wz-kompakt"> KOMPAKT 92</label><br>
+				<label><input type="checkbox" id="wz-saug"> Saug</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Marksman Rifles</h2>
+				<label><input type="checkbox" id="wz-swat"> SWAT 5.56</label><br>
+				<label><input type="checkbox" id="wz-tsarkov"> Tsarkov 7.62</label><br>
+				<label><input type="checkbox" id="wz-aek"> AEK-973</label><br>
+				<label><input type="checkbox" id="wz-dm10"> DM-10</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Launchers/Specials</h2>
+				<label><input type="checkbox" id="wz-cigma"> CIGMA 2B</label><br>
+				<label><input type="checkbox" id="wz-he1"> HE-1</label><br>
+				<label><input type="checkbox" id="wz-sirin"> SIRIN 9mm</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Shotguns</h2>
+				<label><input type="checkbox" id="wz-marinesp"> Marine SP</label><br>
+				<label><input type="checkbox" id="wz-asg"> ASG-89</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Sniper Rifles</h2>
+				<label><input type="checkbox" id="wz-frostline"> LW3A1 Frostline</label><br>
+				<label><input type="checkbox" id="wz-svd"> SVD</label><br>
+				<label><input type="checkbox" id="wz-lr"> LR 7.62</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2>Melee</h2>
+				<label><input type="checkbox" id="wz-knife"> Knife</label><br>
+				<label><input type="checkbox" id="wz-bat"> Baseball Bat</label><br>
+				<label><input type="checkbox" id="wz-drill"> Power Drill</label><br><br>
+			</div>
+			
+			<div class="grid-item">
+				<h2 id="wz-counter">Counter: 0</h2>
+				<button onclick="reset()" >Reset</button>
+			</div>
+			
+		</div>
+	</div>
+
+<script>
+
+var globalGameMode;
+
+function save(e){
+	const checkbox = e.srcElement;
+	localStorage.setItem(checkbox.id, checkbox.checked);
+}
+	
+function load(){	
+	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	checkboxes.forEach((checkbox) => {
+		const savedState = localStorage.getItem(checkbox.id);
+		if (savedState !==null) { 
+			checkbox.checked = savedState === 'true';
+		}
+	});
+	
+	
+	const labels = document.querySelectorAll('label');
+	labels.forEach((label) => {
+		const id = label.firstChild.id;
+		const colorId = id.concat("-color");
+		const color = localStorage.getItem(colorId)
+		if (!(color === null)) { label.style.color = color;}
+	});
+	
+	
+	counter();
+}
+
+function openGameMode(evt, gameMode) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+	tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	
+	document.getElementById(gameMode).style.display = "block";
+	evt.currentTarget.className += " active";
+	
+	globalGameMode = gameMode;
+	
+	counter();
+	
+}
+
+function counter() {
+	var count = 0;
+	var total = 0;
+	
+	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	checkboxes.forEach((checkbox) => {
+		if (checkbox.id.includes(globalGameMode)){
+			total++;
+			if (checkbox.checked == true) {
+				count++;
+			}
+		}
+	});
+		
+		document.getElementById(globalGameMode.concat("counter")).innerHTML = "Counter: ".concat(count, "/", total);
+}
+
+function reset() {
+	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	checkboxes.forEach((checkbox) => {
+		if (checkbox.id.includes(globalGameMode)) {
+			checkbox.checked = false;
+		}
+	});
+	save();
+	counter();
+}
+
+function changeColor(e) {
+	var color = e.srcElement.style.color;
+	
+	switch(color) {
+		case "black":
+			e.srcElement.style = "color: green;";
+			break;
+		case "green":
+			e.srcElement.style = "color: blue;";
+			break;
+		case "blue":
+			e.srcElement.style = "color: red;";
+			break;
+		case "red":
+			e.srcElement.style = "color: purple;";
+			break;
+		case "purple":
+			e.srcElement.style = "color: rgb(255, 195, 0);";
+			break;
+		case "rgb(255, 195, 0)":
+			e.srcElement.style = "color: silver;";
+			break;
+		case "silver":
+			e.srcElement.style = "color: black;";
+			break;
+	}
+	
+	color = e.srcElement.style.color;
+	
+	const id = e.srcElement.firstChild.id;
+	const colorId = id.concat("-color");
+	localStorage.setItem(colorId, color);
+}
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+checkboxes.forEach((checkbox) => {
+	checkbox.addEventListener('change', (e) => {save(e);});
+	checkbox.addEventListener('change', counter);
+	
+});
+
+document.addEventListener('DOMContentLoaded', load);
+
+document.getElementsByClassName('tablinks')[1].click();
+
+const labels = document.querySelectorAll('label');
+labels.forEach((label) => {
+	label.style.color = "black";
+	label.addEventListener('contextmenu', (e) => {e.preventDefault(); changeColor(e);});
+});
+
+
+
+</script>
+
+</body>
+</html>
